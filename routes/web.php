@@ -169,6 +169,12 @@ Route::group(['prefix' => 'auth'], function () {
     })->name('register');
 });
 
+Route::get('/generate', function(){
+
+    Artisan::call('storage:link');
+    echo 'ok';
+ });
+
 // Route::view('/pages/slick', 'pages.slick');
 // Route::view('/pages/datatables', 'pages.datatables');
 // Route::view('/pages/blank', 'pages.blank');
