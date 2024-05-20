@@ -6,7 +6,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="widget">
                         <div class="footer_logo">
-                            <a href="#"><img src="{{asset('media/logo.png')}}" alt="logo" height="50px"/></a>
+                            <a href="#"><img src="{{asset('media/logo.png')}}" alt="logo" height="100px"/></a>
                         </div>
                         <p>{{env("APP_DESCRIPTION")}}</p>
                     </div>
