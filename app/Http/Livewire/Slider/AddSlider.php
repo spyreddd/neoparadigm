@@ -20,14 +20,14 @@ class AddSlider extends Component
             [
                 'title' => 'required',
                 'subtitle' => 'required',
-                'image' => 'required|image|max:3070',
+                'image' => 'required|image|max:5070',
                 'cta_title' => 'sometimes|nullable|required_if:cta,1',
                 'cta_url' => 'sometimes|nullable|required_if:cta,1|url',
             ]
         );
 
         $imagePath = $this->image->storePublicly('media/slider', 'public');
-        
+
         Slider::create([
             'title' => $this->title,
             'subtitle' => $this->subtitle,
@@ -39,5 +39,5 @@ class AddSlider extends Component
         $this->dispatchBrowserEvent('notifyUpdate');
         $this->reset();
     }
-    
+
 }
