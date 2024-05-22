@@ -67,10 +67,10 @@
                                     class="btn btn-sm btn-secondary" data-bs-toggle="tooltip" title="Detail">
                                     <i class="fa fa-eye"></i>
                                 </a>
-                                <button type="button" wire:click="confirmDelete({{ $invoice->id }})"
+                                {{-- <button type="button" wire:click="confirmDelete({{ $invoice->id }})"
                                     class="btn btn-sm btn-secondary" data-bs-toggle="tooltip" title="Delete">
                                     <i class="fa fa-times"></i>
-                                </button>
+                                </button> --}}
                             </div>
                         </td>
                     </tr>
