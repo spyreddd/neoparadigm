@@ -10,7 +10,7 @@ class EditAccountComponent extends Component
 {
     public $user;
 
-    public $old_password, $password, $password_confirmation;   
+    public $old_password, $password, $password_confirmation;
 
     protected $rules = [
         'user.name' => 'required|min:6',

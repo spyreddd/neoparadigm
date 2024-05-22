@@ -16,8 +16,8 @@
                     disabled>
             </div>
             <div class="form-group col-md-12 mb-3">
-                <label>Current Password</label>
-                <input  class="form-control @error('old_password') is-invalid @enderror" name="password" type="password" wire:model='old_password'>
+                {{-- <label>Current Password</label>
+                <input  class="form-control @error('old_password') is-invalid @enderror" name="password" type="password" wire:model='old_password'> --}}
                 @error('old_password')
                     <div class="invalid-feedback">
                         {{ $message }}
