@@ -30,7 +30,7 @@ class EditCharacter extends Component
         $this->validate([
             'name' => 'required',
             'description' => 'required',
-            'image' => 'nullable|sometimes|image|max:2048'
+            'image' => 'nullable|sometimes|image|max:10480'
         ]);
 
         if ($this->image){

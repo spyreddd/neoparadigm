@@ -10,7 +10,7 @@ class AddCharacter extends Component
 {
     use WithFileUploads;
     public $name, $description, $image;
-    
+
     public function render()
     {
         return view('livewire.characters.add-character');
@@ -21,7 +21,7 @@ class AddCharacter extends Component
         $this->validate([
             'name' => 'required',
             'description' => 'required',
-            'image' => 'required|image|max:2048'
+            'image' => 'required|image|max:10480'
         ]);
 
         $imagePath = $this->image->storePublicly('media/characters', 'public');
