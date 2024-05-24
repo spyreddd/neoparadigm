@@ -173,7 +173,7 @@
                             <i class="flaticon-support"></i>
                         </div>
                         <div class="icon_box_content">
-                            <h5>27/4 Support</h5>
+                            <h5>24/7 Support</h5>
                             <p>We're here to help you with any questions, concerns or assistance you need. Available 24/7 to
                                 help find products, manage orders or resolve technical issues. Contact us anytime for the
                                 best customer service in real time.</p>
