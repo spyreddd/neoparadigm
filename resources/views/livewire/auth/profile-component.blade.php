@@ -37,7 +37,7 @@
                      </span>
                  </div>
              </div>
-             <div class="mb-3">
+             {{-- <div class="mb-3">
                  <label class="form-label" for="old_pass">Old Password</label>
                  <div class="input-group">
                      <input type="password" class="form-control" id="old_pass" name="old_pass"
@@ -46,7 +46,7 @@
                          <i class="fa fa-asterisk"></i>
                      </span>
                  </div>
-             </div>
+             </div> --}}
              <div class="mb-3">
                  <label class="form-label" for="side-overlay-profile-password">New Password</label>
                  <div class="input-group">
