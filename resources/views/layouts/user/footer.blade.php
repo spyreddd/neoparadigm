@@ -12,8 +12,8 @@
                     </div>
                     <div class="widget">
                         <ul class="social_icons social_white">
-                            <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-                            <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+                            <li><a href="https://www.facebook.com/NeoParadigmComics"><i class="ion-social-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/komik_npc/"><i class="ion-social-instagram-outline"></i></a></li>
                         </ul>
                     </div>
                 </div>

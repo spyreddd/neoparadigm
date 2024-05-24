@@ -25,7 +25,7 @@
                         </div>
                         <div class="contact_text">
                             <span>Email Address</span>
-                            <a href="mailto:info@sitename.com">{{env('APP_EMAIL')}} </a>
+                            <a href="neoparadigmcomicsindonesia@gmail.com">{{env('APP_EMAIL')}} </a>
                         </div>
                     </div>
                 </div>
