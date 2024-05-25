@@ -6,12 +6,16 @@ use App\Models\Cart;
 use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
-
+use Livewire\WithPagination;
 
 class ProductsComponent extends Component
 {
+    use WithPagination;
+
     public $showing = 8;
     public $perPage = 8;
+
+    protected $paginationTheme = 'bootstrap'; // Use Bootstrap for pagination styling
 
     public function render()
     {
@@ -22,7 +26,7 @@ class ProductsComponent extends Component
     public function load()
     {
         $this->dispatchBrowserEvent('loadmore');
-        $this->perPage = $this->perPage + $this->showing;
+        $this->perPage += $this->showing;
     }
 
     public function showing($size)
@@ -34,14 +38,12 @@ class ProductsComponent extends Component
     {
         $product = Product::findOrFail($productId);
 
-        // Check if the product is out of stock
         if ($product->quantity == 0) {
             $this->dispatchBrowserEvent('message', ['type' => 'error', 'msg' => 'Product is out of stock.']);
             return;
         }
 
-        // Check if the requested quantity is more than the available stock
-        $requestedQuantity = 1; // Assuming you are adding one item at a time
+        $requestedQuantity = 1;
         if ($requestedQuantity > $product->quantity) {
             $this->dispatchBrowserEvent('message', ['type' => 'error', 'msg' => 'Quantity is more than stock.']);
             return;
@@ -62,7 +64,6 @@ class ProductsComponent extends Component
         }
 
         if ($cartItem) {
-            // Check if the total quantity in the cart plus the requested quantity exceeds the stock
             if ($cartItem->quantity + $requestedQuantity > $product->quantity) {
                 $this->dispatchBrowserEvent('message', ['type' => 'error', 'msg' => 'Quantity is more than stock.']);
                 return;
