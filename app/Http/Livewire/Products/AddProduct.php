@@ -27,7 +27,7 @@ class AddProduct extends Component
             'category' => 'required|in:0,1',
             'image' => 'required|image|max:5070',
             'weight' => 'sometimes|nullable|required_if:category,1|numeric',
-            'softfile' => 'sometimes|nullable|required_if:category,0|mimes:pdf|max:10240',
+            'softfile' => 'sometimes|nullable|required_if:category,1|mimes:pdf|max:20480',
         ]);
 
         $imagePath = $this->image->storePublicly('media/products', 'public');
