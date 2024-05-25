@@ -1,3 +1,21 @@
+@push('css')
+<style>
+.pagination-top {
+    margin-bottom: 50px; /* Atur jarak sesuai keinginan */
+}
+</style>
+@endpush
+
+<div>
+    <!-- Pagination atas -->
+    <div class="row">
+        <div class="col-12 mt-2 mt-md-4 d-flex justify-content-center pagination-top">
+            <ul class="pagination pagination_style1 pagination-red">
+                {{ $characters->links() }}
+            </ul>
+        </div>
+    </div>
+
 <div class="container">
     <div class="row">
         @foreach ($characters as $character)
