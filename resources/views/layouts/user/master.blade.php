@@ -45,6 +45,7 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
     @stack('css')
     @livewireStyles
 </head>
@@ -106,6 +107,8 @@
     <script src="{{ asset('assets/js/toastr.min.js') }}"></script>
     <!-- scripts js -->
     <script src="{{ asset('assets/js/scripts.js') }}"></script>
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
     @livewireScripts
     @stack('js')
     <script>
