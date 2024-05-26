@@ -20,16 +20,17 @@
         </ul>
     </div>
     <ul class="navbar-nav attr-nav align-items-center">
-        <li><a href="javascript:void(0);" class="nav-link search_trigger"><i class="linearicons-magnifier"></i></a>
+        {{-- <li><a href="javascript:void(0);" class="nav-link search_trigger"><i class="linearicons-magnifier"></i></a>
             <div class="search_wrap">
                 <span class="close-search"><i class="ion-ios-close-empty"></i></span>
                 <form>
-                    <input type="text" placeholder="Search" class="form-control" id="search_input">
+                    <form action="{{ route('products') }}" method="GET">
+                    <input name="search" placeholder="..." class="form-control" type="text">
                     <button type="submit" class="search_icon"><i class="ion-ios-search-strong"></i></button>
                 </form>
             </div>
             <div class="search_overlay"></div>
-        </li>
+        </li> --}}
         @livewire('master.carts-component')
     </ul>
 </nav>

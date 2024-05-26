@@ -14,12 +14,26 @@ class ProductsComponent extends Component
 
     public $showing = 8;
     public $perPage = 8;
+    public $search = '';
 
     protected $paginationTheme = 'bootstrap'; // Use Bootstrap for pagination styling
 
+    public function updatingSearch()
+    {
+        $this->resetPage();
+    }
+
     public function render()
     {
-        $products = Product::latest()->paginate($this->perPage);
+        $query = Product::query();
+
+        if ($this->search) {
+            $query->where('name', 'LIKE', '%' . $this->search . '%')
+                  ->orWhere('description', 'LIKE', '%' . $this->search . '%');
+        }
+
+        $products = $query->latest()->paginate($this->perPage);
+
         return view('livewire.master.products-component', ['products' => $products]);
     }
 
@@ -84,3 +98,4 @@ class ProductsComponent extends Component
         $this->dispatchBrowserEvent('message', ['type' => 'success', 'msg' => 'Product added to cart successfully.']);
     }
 }
+
