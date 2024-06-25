@@ -46,7 +46,7 @@ class CheckoutComponent extends Component
 
         $response = curl_exec($curl);
         $err = curl_error($curl);
-
+        $this->fullname = "";
         curl_close($curl);
 
         if (!$err) {
