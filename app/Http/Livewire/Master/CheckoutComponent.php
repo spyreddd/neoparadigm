@@ -224,7 +224,7 @@ class CheckoutComponent extends Component
 
         $customerDetail = [
             'firstName' => $this->fullname,
-            'lastName' => 'surname',
+            'lastName' => '',
             'email' => $email,
             'phoneNumber' => $phoneNumber,
             'billingAddress' => $address,
