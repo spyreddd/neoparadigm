@@ -27,7 +27,7 @@
                 aria-label="Role" wire:model="role">
                 <option selected="">Select an option</option>
                 <option value="user" @if($role == "user") {{"selected"}} @endif>Regular User</option>
-                <option value="admin" @if($role == "admin") {{"selected"}} @endif>Super Admin</option>
+                <option value="admin" @if($role == "admin") {{"selected"}} @endif>Admin</option>
             </select>
             <label class="form-label" for="role">Role</label>
             @error('role')
